@@ -1,0 +1,10 @@
+Maintainer: DeepCover <deepcover1000@gmail.com>
+Section: base
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9)
+Package: quicksg
+Architecture: amd64
+Depends: debconf (>=0.2.26)
+Version: 1.0.1
+Description: Fetch /pol, search pol threads, locate and open the sg thread on /pol; see quicksg --help for more info on usage
