@@ -1,0 +1,17 @@
+1. This folder contains the current python source code that was used to create the .c file. Cython3 was used to generate this file.
+  i.e. cython3 --embed -o quicksg.c quicksg.py
+
+2. Subsequently gcc was used to compile the executable that was then packaged. The compilation of the python ==> .c 
+  i.e. gcc -Os -I /usr/include/python3.5 -o quicksg quicksg.c -lpython3.5m -lpthread -lm -lutil -ldl
+  
+3. Once the package creation requirements were in place ( folders etc ) the package was generated from the compiled .c
+  i.e. sudo dpkg-deb --build ~/projects/quicksg/quicksg --all
+  
+4. The packaged application was then installed via dpkg
+  i.e. sudo dpkg -i quicksg.deb
+  
+  You need to ensure that you have build--essential, python dev versions and all that good stuff installed on your machine 
+  before running any of the above.
+  
+  If you have questions just shout.
+  
